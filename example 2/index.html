@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Upload file</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Uploaded file CSS -->
+		<link href="style.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="container">
+
+			<div class="page-header text-center">
+			  <h1>Testing the uploaded file size<small> by jquery</small></h1>
+			</div>
+
+			<form action="" method="POST" role="form">
+
+				<div class="alert-danger hide">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<span></span>
+				</div>
+
+        <span class="btn btn-default btn-file">
+			    <label for="image">Upload image</label>
+          <input type="file" name="image" id="image" onchange="fileUploaderChecker(1,this)">
+          <span class="error-message"></span>
+				</span>
+
+				<br><br>
+
+				<span class="btn btn-default btn-file">
+          <label for="cv">Upload cv</label>
+          <input type="file" name="cv" id="cv" onchange="fileUploaderChecker(2,this)">
+          <span class="error-message"></span>
+				</span>
+
+			</form>
+
+		</div><!--container-->
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- checking file size -->
+		<script src="checking_size.js"></script>
+
+	</body>
+</html>
